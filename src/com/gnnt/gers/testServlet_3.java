@@ -27,6 +27,18 @@ public class testServlet_3 extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println(request.getAuthType());
+		System.out.println(request.getRequestURI());
+		StringBuffer str = new StringBuffer();
+		String line = null;
+		System.out.println(request.getParameter("a"));
+		while ((line = request.getReader().readLine()) != null) {
+			str.append(line);
+		}
+		System.out.println(str);
+		
+		
+		
 	}
 
 	/**
@@ -34,6 +46,7 @@ public class testServlet_3 extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
 
 }

@@ -14,7 +14,11 @@ public class NumObservable extends Observable{
 	public int getData_two() {
 		return data_two;
 	}
-
+	
+	/**
+	 * @deprecated 过期方法测试
+	 * @param data_two
+	 */
 	public void setData_two(int data_two) {
 		this.data_two = data_two;
 		super.setChanged();
